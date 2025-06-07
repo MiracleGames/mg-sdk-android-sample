@@ -1,0 +1,1 @@
+# mg-sdk-android-sample
