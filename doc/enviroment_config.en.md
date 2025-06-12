@@ -15,9 +15,10 @@ repositories {
 Add the dependency to your module's build.gradle:
 ```groovy
 dependencies {
-    implementation 'com.mguwp.sdk:android:1.0.3'
+    implementation 'com.mguwp.sdk:android:1.0.2'
 }
 ```
+> The latest version of the SDK can be found on [mvnrepository](https://mvnrepository.com/artifact/com.mguwp.sdk/android)
 
 ### 3. Game AndroidManifest.xml Configuration
 > For Android 11 and above, you need to apply for the "QUERY_ALL_PACKAGES" permission, otherwise WeChat Pay cannot be opened.

@@ -16,9 +16,11 @@ repositories {
 　　在module的build.gradle中添加依赖
 ```groovy
 dependencies {
-    implementation 'com.mguwp.sdk:android:1.0.3'
+    implementation 'com.mguwp.sdk:android:1.0.2'
 }
 ```
+> sdk最新版本可在[mvnrepository](https://mvnrepository.com/artifact/com.mguwp.sdk/android)中查看
+
 ### 3、游戏AndroidManifest.xml的配置
 > 在 Android11 及以上系统中，需要申请"查询已安装App"的权限，否则无法打开微信支付
 

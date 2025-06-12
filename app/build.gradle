@@ -51,7 +51,7 @@ android {
     dependencies {
         implementation 'com.android.support:support-v4:26.1.0'
         implementation 'com.android.support:appcompat-v7:26.1.0'
-        implementation 'com.mguwp.sdk:android:1.0.1' //引入mgSdk
+        implementation 'com.mguwp.sdk:android:1.0.2' //引入mgSdk
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
