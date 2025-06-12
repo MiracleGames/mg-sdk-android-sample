@@ -24,4 +24,4 @@ MGSdkPlatform.getInstance().init(this, new MGInitListener() {
 　　● 网络故障，没有正确的网络支持  
 　　● 本SDK不支持VPN，本机开启了VPN软件  
 　　● AppKey错误，请登录开发者后台检查应用设置  
-　　● 服务器问题，请检查result的错误信息，及时[联系技术支持](contact.zh-CN)
+　　● 服务器问题，请检查result的错误信息，及时[联系技术支持](contact.zh-CN.md)
