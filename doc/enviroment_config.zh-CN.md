@@ -22,7 +22,7 @@ dependencies {
 ### 3、游戏AndroidManifest.xml的配置
 > 在 Android11 及以上系统中，需要申请"查询已安装App"的权限，否则无法打开微信支付
 
-　　在&lt;application>&lt;/application>里面加入Activity声明： (注：除MG SDK主工程声明配置以外其他第三方登录配置均为
+　　在`<application></application>`里面加入Activity声明： (注：除MG SDK主工程声明配置以外其他第三方登录配置均为
 当前项目需求进行选择配置)  
 - **AppKey：** 需将参数值替换为MG开发者后台分配的游戏AppKey  
 - **ChannelID：** 渠道号（保留字段默认传”mg”）  

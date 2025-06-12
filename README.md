@@ -1,138 +1,34 @@
-[# mg-sdk-android-sample]()
+# Miracle Games Android SDK
 
-**Read this in other languages: [English](README.md), [中文](README.zh-CN.md).**
+**Other language versions: [English](README.md), [中文](README.zh-CN.md).**
 
-# MG SDK Android
+**SDK Name:** Miracle Games Android SDK
 
-`mg-sdk-android` is a unified login and payment SDK designed for mobile game developers, supporting various mainstream login methods and payment channels.
+**Company Name of SDK Provider:** Beijing Qiyou Lingdong Technology Co., Ltd.
 
----
+**Types of Personal Information Processed:** Data actively uploaded by you, device information (device model, operating system version number), network information (network type), application information.
 
-## 📌 Features
+**Purpose of Use and Functional Scenarios:** Provides login, payment, and other related functions.
 
-### 🔐 Login Methods
+**SDK Privacy Policy:** [Miracle Games Privacy Policy](https://www.mguwp.net/developer_privacy.html)
 
-- WeChat Login
-- QQ Login
-- Facebook Login
-- Google Login
+**Processing Method:** 1. Ensures security through SSL protocol encryption and HTTPS transmission encryption technology; 2. Processes data with de-identification measures such as encryption and anonymization.
 
-### 💰 Payment Channels
-
-- WeChat Pay
-- Alipay
-- MG Pay (Official)
+**Compliance Usage Instructions:** [Miracle Games SDK Compliance Usage Guide](https://www.mguwp.net/developer_compliance.html)
 
 ---
 
-## ⚙️ Quick Integration
+# Integration and Function Description
+### [Android SDK Environment Configuration ](doc/enviroment_config.en.md)
+### [SDK Initialization](doc/sdk_init.en.md)
+### [Login](doc/sdk_login.en.md)
+### [Payment](https://doc.mguwp.net/androidpayment.html)
+### [Anti-addiction ](doc/anti_addiction.en.md)
 
-### 1. Add Maven Repository
+# Contact Information
 
-Add to your project `build.gradle`:
-
-```groovy
-repositories {
-    mavenCentral()
-}
-```
-
-### 2. Add SDK Dependency
-```groovy
-implementation 'com.mguwp.sdk:android:1.0.1'
-```
-
-### 3. Configure Channel & Application ID
-```groovy
-mg {
-    applicationId "com.mg.game.jqyct" // Dynamic package name
-    manifestPlaceholders = [CHANNEL_VALUE: "mg"] // Replace ${CHANNEL_VALUE} in the manifest
-    dimension "custom"
-}
-```
-
-## 🧪 Sample Code
-See MainActivity.java for full examples of SDK usage: initialization, login, payment, and more.
-
-### ✅ Initialize SDK
-```java
-MGSdkPlatform.getInstance().init(this, new MGInitListener() {
-    @Override
-    public void onSuccess(String msg) {
-        // Init success
-    }
-
-    @Override
-    public void onFailed(String msg) {
-        // Init failed
-    }
-});
-```
-
-### 🔐 Login
-```java
-MGSdkPlatform.getInstance().login(this, new MGLoginListener() {
-    @Override
-    public void onSuccess(String msg) {
-        // Login success
-    }
-
-    @Override
-    public void onFailed(String msg) {
-        // Login failed
-    }
-});
-```
-
-### 💳 Payment
-```java
-MGSdkPlatform.getInstance().pay(this, "PRODUCT_ID", "ORDER_INFO", "UNIQUE_USER_ID", new MGPayListener() {
-    @Override
-    public void onSuccess(String msg) {
-        // Payment success
-    }
-
-    @Override
-    public void onFailed(String msg) {
-        // Payment failed
-    }
-});
-```
-
-### 👤 Real-Name Verification
-```java
-MGSdkPlatform.getInstance().antiAddition(this, new MGAntiAdditionListener() {
-    @Override
-    public void onSuccess(String msg) {
-        // Verified
-    }
-
-    @Override
-    public void onFailed(String msg) {
-        // Verification failed
-    }
-});
-```
-
-### 🧩 AndroidManifest Setup
-The SDK relies on several configuration parameters, including:
-
-API Keys
-
-Channel placeholder replacement using ${CHANNEL_VALUE}
-
-Refer to the included AndroidManifest.xml for detailed configuration.
-
-### 🔁 Lifecycle Binding
-The SDK requires lifecycle binding within your Activity. For example:
-```java
-@Override
-protected void onResume() {
-    super.onResume();
-    MGSdkPlatform.getInstance().onResume();
-}
-```
-For other lifecycle methods, please refer to the sample MainActivity.java.
-
-## 📞 Contact Us
-If you encounter issues during integration, feel free to contact the MG SDK tech support team.
+| Type              | Details                      |
+|-------------------|------------------------------|
+| 📞 Service Phone  | 86-010-85895781              |
+| 📧 Technical Email | Technic@mguwp.com            |
+| 🕒 Service Hours   | 10:00 - 19:00                |
