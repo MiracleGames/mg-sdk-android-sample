@@ -15,7 +15,7 @@ repositories {
 Add the dependency to your module's build.gradle:
 ```groovy
 dependencies {
-    implementation 'com.mguwp.sdk:android:1.0.2'
+    implementation 'com.mguwp.sdk:android:1.4.0'
 }
 ```
 > The latest version of the SDK can be found on [mvnrepository](https://mvnrepository.com/artifact/com.mguwp.sdk/android)
