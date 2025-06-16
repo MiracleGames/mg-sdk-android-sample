@@ -22,7 +22,7 @@
 ### [Android SDK环境配置 ](doc/enviroment_config.zh-CN.md)
 ### [SDK初始化](doc/sdk_init.zh-CN.md)
 ### [登录](doc/sdk_login.zh-CN.md)
-### [支付](https://doc.mguwp.net/androidpayment.html)
+### [支付](doc/sdk_Payment.zh-CN.md)
 ### [防沉迷 ](doc/anti_addiction.zh-CN.md)
 
 # 联系方式
