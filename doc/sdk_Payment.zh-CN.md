@@ -11,6 +11,7 @@
 ●  游戏服务器在收到MG服务器的回调通知时，需使用product_tag参数同游戏订单信息对比校验，或使用product_price_usd参数同道具价格对比校验，校验通过则下放道具。product_tag参数为开发者后台中维护的属性。属性名为"<span  style="color:blue"> 自定义标签"，建议存储道具ID。MG服务器会将此属性值经过 url编码后传给游戏服务器。<br>
 ●  若开发者没有服务器，则可以通过客户端接收回调事件，完成游戏道具的发放<br>
 ![image](https://doc.mguwp.net/images/uwppayment_05.png)
+```mermaid
 sequenceDiagram
   游戏->>+游戏服务器: 点击充值档位， 游戏服存储订单信息
   游戏服务器->>+游戏: 返回订单信息
@@ -31,6 +32,7 @@ sequenceDiagram
   游戏->>+MG SDK: 调用报告订单核销接口
   MG SDK->>+MG服务器: 核销订单
   end
+```
 ## 3、 用户支付
 　　 调用该接口后，会打开平台的支付界面。当用户支付完成或取消支付时，会发送响应的支付回调消息。
 ```java
