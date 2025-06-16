@@ -22,7 +22,7 @@
 ### [Android SDK Environment Configuration ](doc/enviroment_config.en.md)
 ### [SDK Initialization](doc/sdk_init.en.md)
 ### [Login](doc/sdk_login.en.md)
-### [Payment](https://doc.mguwp.net/androidpayment.html)
+### [Payment](doc/sdk_Payment.en.md)
 ### [Anti-addiction ](doc/anti_addiction.en.md)
 
 # Contact Information
