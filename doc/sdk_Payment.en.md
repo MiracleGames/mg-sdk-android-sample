@@ -10,8 +10,28 @@
 ●  When multiple in-game items share the same price point, there's no need to create individual products for each item in the Miracle Games backend. Instead, a single universal product can be established. When calling the payment interface, pass the item ID to the comment parameter. Upon payment completion, Miracle Games will deliver this comment parameter directly to the developer. Developers can then distribute the corresponding items based on this parameter.<br>
 ●  When the game server receives the callback notification from the MG server, it needs to use the product_tag parameter to compare with the game order information, or use the product_price_usd parameter to compare with the price of the props to check, and then the props will be released if it passes the check. product_tag parameter is an attribute that is maintained by the background of the developer. The name of the attribute is"custom_tag"，, and it is recommended to store the ID of the product, MG server will pass the value of this attribute to the game server after url encoding.<br>
 ●  If the developer doesn't have a server, he can receive the callback event through the client to complete the game props issuance.<br>
-
-![image](https://doc.mguwp.net/en/images/uwppayment_05.png)
+```mermaid
+sequenceDiagram
+Game->>+Game Server: click on the top-up slot, the game server stores the order information
+Game Server->>+Game: return order information
+Game->>+MG SDK: call MG payment window (with order information)
+MG SDK->>+MG Server: select payment channel, store order information in MG Server
+MG Server->>+3rd party payment: initiate order request
+3rd party payment->>MG Server: asynchronous callback notification, update order status on MG server
+%%Note over MG Server, Game: server side callback notification
+Par Server-side callback notification
+MG Server->>+Game Server: asynchronous callback notification, update game server order status (return Success)
+Game Server->>+Game: Placement of props
+end
+%%%Note over MG Server,Game:Client Callback Notification  
+par Client callback notification
+MG SDK->>+MG Server:Check Order Status
+MG Server->>+MG SDK:return successful order information
+MG SDK->>+Game: client callback notification, drop props
+Game->>+MG SDK: call report order cancellation interface
+MG SDK->>+MG Server: write off the order.
+end
+```
 
 ## 3、 User pays
 　　 A call to this interface opens the platform's payment interface. A responsive payment callback message is sent when the user's payment is complete or canceled.
