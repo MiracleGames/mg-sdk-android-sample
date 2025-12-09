@@ -16,7 +16,7 @@ repositories {
 　　在module的build.gradle中添加依赖
 ```groovy
 dependencies {
-    implementation 'com.mguwp.sdk:android:1.4.1'
+    implementation 'com.mguwp.sdk:android:1.4.2'
 }
 ```
 > sdk最新版本可在[mvnrepository](https://mvnrepository.com/artifact/com.mguwp.sdk/android)中查看
